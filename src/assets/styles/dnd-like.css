@@ -1,0 +1,118 @@
+/* #init */
+@font-face {
+    font-family: 'Bookinsanity';
+    src:
+        /* local('Bookinsanity Remake'), */
+        /* local('Bookinsanity'), */
+        /* url('./Bookinsanity/Bookinsanity.otf'), */
+        url('https://raw.githubusercontent.com/jonathonf/solbera-dnd-fonts/master/Bookinsanity/Bookinsanity.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Mr Eaves Small Caps';
+    src:
+        /* local('Mr Eaves Small Caps'), */
+        /* url('./Mr Eaves/Mr Eaves Small Caps.otf'), */
+        url('https://raw.githubusercontent.com/jonathonf/solbera-dnd-fonts/master/Mr%20Eaves/Mr%20Eaves%20Small%20Caps.otf') format('opentype');
+    font-feature-settings: 'smcp' on;
+}
+
+@font-face {
+    font-family: "Bookinsanity";
+    src:
+        /* local("Bookinsanity Remake"),
+        local("Bookinsanity"),
+        url("./Bookinsanity/Bookinsanity Italic.otf"), */
+        url("https://raw.githubusercontent.com/jonathonf/solbera-dnd-fonts/master/Bookinsanity/Bookinsanity%20Italic.otf") format("opentype");
+    font-style: italic;
+}
+
+:root {
+    --a4-width: 21cm;
+    --a4--heigth: 29.7cm;
+    --dnd-heigth: 27.6cm;
+    --dnd-margin-top: 1.3cm;
+    --dnd-margin-v: 2cm;
+    --dnd-column-gap: 1cm;
+    --ratio: 1.4143;
+}
+
+.preview-content {
+    background-image: url('../bg.jpeg');
+    padding: var(--dnd-margin-top) var(--dnd-margin-v);
+}
+
+.dnd-like {
+    align-items: flex-start;
+    background-color: transparent;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0 var(--dnd-column-gap);
+    height: 100%;
+    justify-content: center;
+    margin: 0 0 30px;
+    width: var(--a4-width);
+    z-index: -1;
+}
+
+.dnd-like .title {
+    width: 100%;
+}
+
+.dnd-like h1,
+.dnd-like h2,
+.dnd-like h3,
+.dnd-like h4 {
+    color: #551306;
+    font-family: 'Mr Eaves Small Caps';
+    font-weight: bold;
+    text-align: left;
+}
+
+.dnd-like h1 {
+    margin: 0;
+}
+
+.dnd-like h2,
+.dnd-like h3,
+.dnd-like h4 {
+    margin: 0.2cm 0 0.1cm;
+}
+
+.dnd-like h3 {
+    border-bottom: solid 2px #c9ad6a;
+}
+
+.dnd-like h1 { font-size: 1cm; }
+.dnd-like h2 { font-size: 0.8cm; }
+.dnd-like h3 { font-size: 0.7cm; }
+.dnd-like h4 { font-size: 0.6cm; }
+
+.dnd-like p {
+    color: #000;
+    font-family: 'Bookinsanity';
+    font-size: .37cm;
+    line-height: .45cm;
+    margin: 0;
+    text-align: justify;
+}
+
+.dnd-like .column {
+    height: 100%;
+    width: calc(50% - 0.5cm);
+}
+
+.dnd-like blockquote {
+    margin: 0.2cm 0;
+}
+
+.dnd-like blockquote {
+    font-style: italic;
+}
+
+.dnd-like blockquote p:last-child {
+    margin: 0.1cm 0 0 auto;
+    text-align: right;
+    max-width: 61.8%;
+}
+/* #finish */
